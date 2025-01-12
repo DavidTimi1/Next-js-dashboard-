@@ -20,9 +20,6 @@ importers:
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.49)
-      # bcrypt:
-      #   specifier: ^5.1.1
-      #   version: 5.1.1
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -54,9 +51,6 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      # '@types/bcrypt':
-      #   specifier: ^5.0.2
-      #   version: 5.0.2
       '@types/node':
         specifier: 22.10.1
         version: 22.10.1
@@ -310,9 +304,6 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20'
 
-  # '@types/bcrypt@5.0.2':
-  #   resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
-
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
@@ -383,9 +374,6 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  # bcrypt@5.1.1:
-  #   resolution: {integrity: sha512-AGBHOG5hPYZ5Xl9KXzU5iKq9516yEmvCKDg3ecP5kX2aB6UqTeXZxk2ELnDgDm6BQSMlLt9rDB4LoSMx0rYwww==}
-  #   engines: {node: '>= 10.0.0'}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -1337,9 +1325,7 @@ snapshots:
       mini-svg-data-uri: 1.4.4
       tailwindcss: 3.4.16
 
-  # '@types/bcrypt@5.0.2':
-  #   dependencies:
-  #     '@types/node': 22.10.1
+  '@types/bcryptjs@2.4.2': {}
 
   '@types/cookie@0.6.0': {}
 
@@ -1415,13 +1401,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  # bcrypt@5.1.1:
-  #   dependencies:
-  #     '@mapbox/node-pre-gyp': 1.0.11
-  #     node-addon-api: 5.1.0
-  #   transitivePeerDependencies:
-  #     - encoding
-  #     - supports-color
+  bcryptjs@2.4.3: {}
 
   binary-extensions@2.3.0: {}
 
