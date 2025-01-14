@@ -31,13 +31,13 @@ export async function createInvoice(formData: FormData) {
   try {
 
     await sql`
-    INSERT INTO invoices (customer_id, amount, status, date)
-    VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
-  `;
+      INSERT INTO invoices (customer_id, amount, status, date)
+      VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
+    `;
   } catch(e){
-    return {
+    console.log({
       message: 'Database Error: Failed to Create Invoice.',
-    };
+    });
   }
 
 revalidatePath('/dashboard/invoices');
@@ -64,10 +64,9 @@ export async function updateInvoice(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
   } catch (e) {
-    
-    return {
+    console.log({
       message: 'Database Error: Failed to Update Invoice.',
-    };
+    });
   }
  
   revalidatePath('/dashboard/invoices');
@@ -76,20 +75,11 @@ export async function updateInvoice(id: string, formData: FormData) {
 
 
 export async function deleteInvoice(id: string) {
-
   try {
-    await sql`
-      DELETE FROM invoices
-      WHERE id = ${id}
-    `;
-    
-  } catch(e) {
-    
-    return {
-      message: 'Database Error: Failed to Delete Invoice.',
-    };
+    await sql`DELETE FROM invoices WHERE id = ${id}`;
+    revalidatePath('/dashboard/invoices');
+    console.log({ message: 'Deleted Invoice.' });
+  } catch (error) {
+    console.log({ message: 'Database Error: Failed to Delete Invoice.' } );
   }
- 
-  revalidatePath('/dashboard/invoices');
-  return { message: 'Deleted Invoice.' };
 }
